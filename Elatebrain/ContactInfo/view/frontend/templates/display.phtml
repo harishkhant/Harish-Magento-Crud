@@ -1,0 +1,82 @@
+<div class="table-wrapper custom-data ">
+<table id="tblCustomerTable" >
+     <tr bgcolor="#3AAA80">
+          <th>ID</th>
+          <th>Name</th>
+          <th>Mobile</th>
+          <th>Email</th>
+          <th>Message</th>
+     </tr>
+    
+     <?php
+     $collection = $block->getCustomData();
+     
+     if (count($collection)):
+             
+              foreach ($collection as $item):
+     ?>
+
+          <tr id="c_row_<?php echo $item->getData('id'); ?>">
+               <td>
+                    <?php echo $item->getData('id'); $last_id = $item->getData('id');?>
+               </td>
+               <td>
+                    <?php echo $item->getData('name'); ?>
+               </td>
+               <td>
+                    <?php echo $item->getData('phone_number'); ?>
+               </td>
+               <td>
+                    <?php echo $item->getData('email'); ?>
+               </td>
+               <td>
+                    <?php echo $item->getData('message'); ?>
+               </td>
+          </tr>
+           
+          <?php endforeach; ?>
+          </table>
+               </div>
+               <?php if ($block->getPagerHtml()): ?>
+                    <div class="order-products-toolbar toolbar bottom">
+                         <?= $block->getPagerHtml() ?>
+                    </div> 
+               <?php endif ?> 
+               <?php  
+               else: ?>
+                    <div class="message info empty">
+                         <span><?= $block->escapeHtml('You have no data in table.') ?></span>
+                    </div>
+               <?php endif ?>
+
+              <!-- <div id="testid" >
+                   <button id="loadbtn" value="<?php //echo $block->getUrl('crud/index/loadmore') ?>">Load More</button>
+              </div>
+                 -->
+
+ 
+<script type="text/javascript">
+
+     //  require(['jquery'], function($) {
+          
+     //      $("#loadbtn").click(function(){
+     //           var url = $('#loadbtn').val();
+     //           var data = window.location.href;
+     //           var id = data.split('=').pop();
+     //           //response++;  
+     //           $.ajax({
+     //           //showLoader: true,
+     //           url: url,
+     //           data : {id: id},
+     //           type: "POST",
+     //           success: function(data) {
+     //                var data = "?p="+data;
+     //                window.open(data,"_self");
+     //           }
+     //      });
+     //      });   
+     // });
+
+</script>
+
+

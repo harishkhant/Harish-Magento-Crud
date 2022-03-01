@@ -1,0 +1,15 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="elatebrain_contactinfo_data_source" xsi:type="string">Elatebrain\ContactInfo\Model\ResourceModel\Registration\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Elatebrain\ContactInfo\Model\ResourceModel\Registration\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">eb_contact_info</argument>
+            <argument name="resourceModel" xsi:type="string">Elatebrain\ContactInfo\Model\ResourceModel\ContactInfo</argument>
+        </arguments>
+    </virtualType>
+</config>

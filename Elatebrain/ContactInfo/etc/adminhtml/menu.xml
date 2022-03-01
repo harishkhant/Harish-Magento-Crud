@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Elatebrain_ContactInfo::manager" title="Elatebrain ContactInfo" module="Elatebrain_ContactInfo" sortOrder="10" resource="Elatebrain_ContactInfo::manager"/>
+        <add id="Elatebrain_ContactInfo::add_row" title="Elatebrain ContactInfo" module="Elatebrain_ContactInfo" sortOrder="20" parent="Elatebrain_ContactInfo::manager" action="crudinfo/contactinfo/index" resource="Elatebrain_ContactInfo::add_row"/>
+    </menu>
+</config>
